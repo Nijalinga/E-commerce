@@ -18,12 +18,12 @@ const ShopContextProvider = (props) => {
     const [cartItems,setCartItems]= useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://shopper-niju-backend.onrender.com')
         .then((response)=>response.json())
         .then((data)=>setAll_product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch('https://shopper-niju-backend.onrender.com',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
      const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/addtocart',{
+            fetch('https://shopper-niju-backend.onrender.com',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -59,7 +59,7 @@ const ShopContextProvider = (props) => {
      const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removeFromcart',{
+            fetch('https://shopper-niju-backend.onrender.com',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
