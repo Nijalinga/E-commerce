@@ -1,0 +1,122 @@
+.loginsinup{
+    width: 100%;
+    height:130vh ;
+    background: #fce3fe;
+    padding-top: 60px;
+}
+.loginsinup-container{
+    width: 500px;
+    height: 470px;
+    background: white;
+    margin: auto;
+   padding: 1px 30px;
+   font-size: 15px;
+   
+
+}
+.loginsinup-container h1{
+    margin: 20px 0px;
+   
+}
+.loginsinup p{
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.loginsinup-fields{
+    display: flex;
+    flex-direction: column;
+    gap:17px;
+    margin-top:20px ;
+   
+  
+}
+.loginsinup-fields input{
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+
+}
+.loginsinup-container button{
+    width:440px;
+    height:55px;
+    color: white;
+    background:#ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.loginsinup-login{
+    margin-top: 20px;
+    color: #5c5c5c;
+    font-size: 15px;
+    font-weight:500 ;
+    
+}
+.loginsinup-login span{
+    color:rgb(85, 85, 250);
+    font-weight: 600;
+}
+.loginsinup-agree{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 10px;
+    color: #5c5c5c;
+    font-size: 14px;
+    font-weight: 500;
+}
+@media(max-width:1280px){
+    .loginsinup{
+        padding-top: 50px;
+    }
+    .loginsinup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .loginsinup-container h1{
+        margin: 10px 0px;
+    }
+    .loginsinup-fields{
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .loginsinup-fields input{
+        height: 65px;
+        width: 93%;
+    }
+    .loginsinup-container button{
+        width: 100%;
+
+    }
+    .loginsinup-login{
+        font-size: 16px;
+    }
+    .loginsinup-agree{
+        font-size: 14px;
+        gap: 10px;
+    }
+}
+@media(max-width:800px){
+    .loginsinup-container{
+        padding: 20px 30px;
+    }
+    .loginsinup-container h1{
+        font-size: 24px;
+    }
+    .loginsinup-fields{
+        margin-top: 20px;
+    }
+    .loginsinup-fields input{
+        height: 50px;
+        font-size: 16px;
+    }
+}
