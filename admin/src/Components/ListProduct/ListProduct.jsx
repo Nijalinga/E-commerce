@@ -74,7 +74,7 @@ const ListProduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('http://localhost:4000/allproducts');
+      const response = await fetch('https://shopper-niju-backend.onrender.com');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -91,7 +91,7 @@ const ListProduct = () => {
 
   const removeProduct = async (id) => {
     try {
-      const response = await fetch('http://localhost:4000/removeproduct', {
+      const response = await fetch('https://shopper-niju-backend.onrender.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
