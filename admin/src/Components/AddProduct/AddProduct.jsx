@@ -128,7 +128,7 @@ const AddProduct = () => {
     formData.append('product', image);
 
     try {
-      const uploadResponse = await fetch('http://localhost:4000/upload', {
+      const uploadResponse = await fetch('https://shopper-niju-backend.onrender.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -144,7 +144,7 @@ const AddProduct = () => {
         setProductDetails((prevState) => ({ ...prevState, image: responseData.img_url })); // Update state
         console.log('Product with Image URL:', product);
 
-        const addProductResponse = await fetch('http://localhost:4000/addproduct', {
+        const addProductResponse = await fetch('https://shopper-niju-backend.onrender.com', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
