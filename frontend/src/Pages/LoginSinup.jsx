@@ -18,7 +18,7 @@ const LoginSinup = () => {
  const login = async()=>{
   console.log("Login function Executed",formData);
   let responseData;
-  await fetch('http://localhost:4000/login',{
+  await fetch('https://shopper-niju-backend.onrender.com',{
     method:'POST',
     headers:{
       Accept:'application/form-data',
@@ -39,7 +39,7 @@ const LoginSinup = () => {
  const signup = async()=>{
   console.log("signup function Executed",formData);
   let responseData;
-  await fetch('http://localhost:4000/signup',{
+  await fetch('https://shopper-niju-backend.onrender.com',{
     method:'POST',
     headers:{
       Accept:'application/form-data',
