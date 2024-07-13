@@ -9,7 +9,7 @@ const Popular = () => {
     
 
   useEffect(()=>{
-    fetch('https://shopper-niju-backend.onrender.com/popularinwomens')
+    fetch('e-backend-shoppify-niju.vercel.app/popularinwomens')
     .then((response)=>response.json())
     .then((data)=>setPopularProduct(data))
 
