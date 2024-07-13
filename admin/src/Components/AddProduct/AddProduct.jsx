@@ -29,7 +29,7 @@ const AddProduct = () => {
     formData.append('product', image);
 
     try {
-      const uploadResponse = await fetch('https://shopper-niju-backend.onrender.com/upload', {
+      const uploadResponse = await fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/upload', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -45,7 +45,7 @@ const AddProduct = () => {
         setProductDetails((prevState) => ({ ...prevState, image: responseData.img_url })); // Update state
         console.log('Product with Image URL:', product);
 
-        const addProductResponse = await fetch('https://shopper-niju-backend.onrender.com/addproduct', {
+        const addProductResponse = await fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/addproduct', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
