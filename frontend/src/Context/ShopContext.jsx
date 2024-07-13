@@ -18,12 +18,12 @@ const ShopContextProvider = (props) => {
     const [cartItems,setCartItems]= useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('e-backend-shoppify-niju.vercel.app/allproducts')
+        fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('e-backend-shoppify-niju.vercel.app/getcart',{
+            fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
      const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('e-backend-shoppify-niju.vercel.app/addtocart',{
+            fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -59,7 +59,7 @@ const ShopContextProvider = (props) => {
      const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('e-backend-shoppify-niju.vercel.app/removeFromcart',{
+            fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/removeFromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
