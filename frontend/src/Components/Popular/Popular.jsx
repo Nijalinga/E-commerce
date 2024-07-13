@@ -9,7 +9,7 @@ const Popular = () => {
     
 
   useEffect(()=>{
-    fetch('e-backend-shoppify-niju.vercel.app/popularinwomens')
+    fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/popularinwomens')
     .then((response)=>response.json())
     .then((data)=>setPopularProduct(data))
 
