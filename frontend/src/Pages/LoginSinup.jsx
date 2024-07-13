@@ -18,7 +18,7 @@ const LoginSinup = () => {
  const login = async()=>{
   console.log("Login function Executed",formData);
   let responseData;
-  await fetch('e-backend-shoppify-niju.vercel.app/login',{
+  await fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/login',{
     method:'POST',
     headers:{
       Accept:'application/form-data',
@@ -39,7 +39,7 @@ const LoginSinup = () => {
  const signup = async()=>{
   console.log("signup function Executed",formData);
   let responseData;
-  await fetch('e-backend-shoppify-niju.vercel.app/signup',{
+  await fetch('e-backend-shoppify-niju-n9j9g7g8f-nijalingas-projects.vercel.app/signup',{
     method:'POST',
     headers:{
       Accept:'application/form-data',
