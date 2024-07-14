@@ -11,7 +11,13 @@ const cors=require("cors");
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+      {
+        origin:[""],
+        methods:['GET','POST'],
+        credentials:true,
+    }
+));
 
 //Database connection with MongoDB
 mongoose.connect("mongodb+srv://Nijuuuuu:2C8UyI8BDJ9TkhY1@cluster0.a9ttmef.mongodb.net/e-commerce")
