@@ -8,7 +8,7 @@ const NewCollections = () => {
   const [new_collection,setNew_collection]=useState([]);
 
   useEffect(()=>{
-     fetch('https://e-backend-shoppify-niju.vercel.app/newcollections')
+     fetch('https://shoppify-nijuu-backend.vercel.app/newcollections')
      .then((response)=>response.json())
      .then((data)=>setNew_collection(data));
   },[])
