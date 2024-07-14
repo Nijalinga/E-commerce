@@ -1,4 +1,3 @@
-
 import React, { createContext, useEffect, useState } from "react";
 export const ShopContext = createContext(null);
 
@@ -18,12 +17,12 @@ const ShopContextProvider = (props) => {
     const [cartItems,setCartItems]= useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('https://e-backend-shoppify-niju.vercel.app/allproducts')
+        fetch('https://shoppify-nijuu-backend.vercel.app/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('https://e-backend-shoppify-niju.vercel.app/getcart',{
+            fetch('https://shoppify-nijuu-backend.vercel.app/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -41,7 +40,7 @@ const ShopContextProvider = (props) => {
      const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('https://e-backend-shoppify-niju.vercel.app/addtocart',{
+            fetch('https://shoppify-nijuu-backend.vercel.app/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -59,7 +58,7 @@ const ShopContextProvider = (props) => {
      const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('https://e-backend-shoppify-niju.vercel.app/removeFromcart',{
+            fetch('https://shoppify-nijuu-backend.vercel.app/removeFromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
