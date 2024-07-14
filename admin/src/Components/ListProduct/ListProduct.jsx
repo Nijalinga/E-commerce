@@ -7,7 +7,7 @@ const ListProduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('https://e-backend-shoppify-niju.vercel.app/allproducts');
+      const response = await fetch('https://shoppify-nijuu-backend.vercel.app/allproducts');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -24,7 +24,7 @@ const ListProduct = () => {
 
   const removeProduct = async (id) => {
     try {
-      const response = await fetch('https://e-backend-shoppify-niju.vercel.app/removeproduct', {
+      const response = await fetch('https://shoppify-nijuu-backend.vercel.app/removeproduct', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
