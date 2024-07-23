@@ -13,7 +13,7 @@ const cors=require("cors");
 app.use(express.json());
 app.use(cors(
       {
-        origin:"https://shoppify-nijuu.vercel.app",
+        origin:[""],
         methods:['GET','POST'],
         credentials:true,
     }
